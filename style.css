@@ -8,15 +8,14 @@
             --light-text: #999999;
         }
 
-        html {
-         scroll-behavior: smooth;
-        }
+        
 
         *{
             box-sizing: border-box;
         }
 
-        body{ 
+        html, body{ 
+            overflow-x: hidden;
             font-family:  "Nata Sans",sans-serif;
             /* font-family: "Raleway", sans-serif; */
             font-optical-sizing: auto;
@@ -24,7 +23,7 @@
             font-style: normal;
             font-size: 16px;
             margin: 0;
-            
+            scroll-behavior: smooth;    
         }
 
         /* Common styles thorought */
