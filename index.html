@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex-layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body style="overflow-x: hidden;">
+    <header class="container-fluid page-header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -35 250 130" role="img" aria-label="Efix mobile phone logo">
+                <style>
+                    .w { stroke: #ffffff; fill: transparent; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+                    .t { fill: #ffffff; font: 700 60px/1 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+                </style>
+
+                <g>
+                    <!-- Phone -->
+                    <rect class="w" x="0" y="0" width="60" height="90" rx="12"/>
+                    <rect class="w" x="10" y="10" width="40" height="60" rx="6"/>
+                    <line class="w" x1="20" y1="5" x2="40" y2="5"/>
+                    <circle class="w" cx="30" cy="80" r="4"/>
+                    <line class="w" x1="60" y1="25" x2="65" y2="25"/>
+                    <line class="w" x1="60" y1="40" x2="65" y2="40"/>
+
+                    <!-- Text -->
+                    <text class="t" x="70" y="65">Efix</text>
+                </g>
+            </svg>
+
+        </div>
+
+        <nav class="nav-con">
+            <ul class="nav-menu">
+                <li class="menu-items">
+                   <div class="con-link"> <a href="" class="nav-link">HOME</a> </div>
+                </li>
+                <li class="menu-items">
+                    <div class="con-link"> <a href="#about-us" class="nav-link">ABOUT</a></div>
+                </li>
+
+                <li class="menu-items">
+                    <div class="con-link">
+                        <a href="#" class="bini nav-link">PAGES</a>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-content"><a href="#" class="drop-link">Team</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#" class="drop-link">Pricing</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#" class="drop-link">Appointment</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#" class="drop-link">Gallery</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#faq" class="drop-link">FAQS</a> <i class="fas fa-angle-right"></i></li>
+                    </ul>
+                </li>
+                <li class="menu-items">
+                    <div class="con-link">
+                        <a href="#" class="nav-link">SERVICES</a>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                        <ul class="dropdown-menu">
+                        <li class="dropdown-content"><a href="#services" class="drop-link">Services</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#services" class="drop-link">Service Details</a> <i class="fas fa-angle-right"></i></li>
+                    </ul>
+                </li>
+                <li class="menu-items">
+                    <div class="con-link">
+                        <a href="#" class="nav-link">BLOG</a>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                        <ul class="dropdown-menu">
+                        <li class="dropdown-content"><a href="#blog" class="drop-link">Blog V-1</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#blog" class="drop-link">Blog V-2</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#blog" class="drop-link">Blog Details V-1</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#blog" class="drop-link">Blog Details V-2</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="#blog" class="drop-link">Blog Details V-3</a> <i class="fas fa-angle-right"></i></li>
+                    </ul>
+                </li>
+                <li class="menu-items">
+                    <div class="con-link"> <a href="#contact" class="nav-link">CONTACT</a></div>
+                </li>
+            </ul>
+            
+            <ul class="right-icons">
+                <!-- Search Icon -->
+                <i class="fas fa-search"> </i> 
+
+                <!-- Shopping Cart Icon -->
+                <i class="fas fa-shopping-cart"></i>
+            </ul>
+
+        </nav>
+
+        <button class="menu-toggle" style="transition: all 1.3s;">
+                <i class="fas fa-bars"></i>
+        </button>        
+
+    </header>
+
+    <section class="hero-page" id="hero-page">
+
+        <div class="hero-content">
+            <div data-aos="fade-down">
+                <h1 class="hero-heading">
+                    Bringing Your Gadgets Back to Life
+                </h1>
+                <p class="hero-body">
+                    Whether it’s a cracked screen, a malfunctioning
+                    battery, or water damage, our team of experts can fix it
+                    quickly and efficiently.
+                </p>
+            </div>
+            <div class="hero-button" data-aos="fade-up">
+                <button class="pBtn">
+                    <span> Discover More </span>
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about-us" id="about-us">
+        <div class="container-fluid">
+            <div class="about-tag">
+                <p class="divider">About Exprience</p>
+            </div>
+            <div class="about-heading">
+                <h1>We Have More Than 20 Years Exprience in Gadget Smartphone & Laptop Repair
+                    Services
+                </h1>
+            </div>
+            <div class="row about-body center">
+            
+                    <div class=" col-12 col-md-4 col-lg-3">
+                        <div class="about-col" data-aos="fade-right">
+                            <div class="about-main">
+                                <div class="about-side">
+                                    <i class="fas fa-award"></i>
+                              </div>
+                                <div class="about-right">
+                                    <h5>Quality Services</h5>
+                                    <p>Duis aute dolor in voluptate velit esse
+                                         cillium dolore eu fugiat nutta pariatp
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3" >
+                        <div class="about-col" data-aos="zoom-in">
+                            <div class="about-main">
+                                <div class="about-side">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="about-right">
+                                    <h5>Quality Service s</h5>
+                                    <p>Duis aute dolor in voluptate velit esse
+                                         cillium dolore eu fugiat nutta pariatp
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="about-col" data-aos="fade-left">
+                            <div class="about-main">
+                                <div class="about-side">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="about-right">
+                                    <h5>Quality Services</h5>
+                                    <p>Duis aute dolor in voluptate velit esse
+                                         cillium dolore eu fugiat nutta pariatp
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="intro" id="intro">
+        <div class="container-fluid">
+            <div class="row space-around">
+            
+                <div class="intro-lcon  col-md-6 col-lg-5">
+                    <div class="intro-left slide-in-left" data-aos data-aos-offset="0" >
+                        <div class="intro-left-content">
+                            <div class="intro-tag">
+                                <p>OUR GOAL</p>
+                                <h3>
+                                    "We will fix it, till we make it"
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="intro-btn">
+                            <button class="pBtn">
+                                <span> Contact Us </span>
+                            </button>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class=" intro-rcon  col-md-6 col-lg-5">
+                    <div class="intro-right">
+                        <div class="info">
+                            <p class="dividerL">OUR INTRODUNCTION</p>
+                            <h1>
+                                Welcome To Smartphone & Laptop Repair
+                                Service Center
+                            </h1>
+                            <p class="main para-head">
+                                Lorem ipsum dolor sit amet at labore consectetur
+                                Lorem ipsum dolor sit amet at labore consectetur
+                                Lorem ipsum dolor sit amet at labore consectetur
+                            </p>
+                        </div>
+                        <div class="card" data-aos="fade-down">
+                            <div class="icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="content">
+                                <h4>Reapire Device</h4>
+                                <p>Lorem ipsum dolor sit amet at labore consectetur</p>
+                            </div>
+                        </div>
+            
+                        <div class="card" data-aos="fade-up">
+                            <div class="icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="content">
+                                <h4>Replace Device</h4>
+                                <p>Lorem ipsum dolor sit amet at labore consectetur</p>
+                            </div>
+                        </div>
+                        <div class="intro-btn">
+                            <button class="pBtn">
+                                <span> Contact Us </span>
+                            </button>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+   <section class="choose" id="choose">
+        <div class="container-fluid">
+            <div class="choose-main">
+                <div class="choose-tag">
+                    <p class="divider"> WHY CHOOSE US</p>
+                </div>
+                <div class="choose-heading">
+                    <h1> Gadget Maintenance For Everyone</h1>
+                </div>
+                <div class="choose-content para-head">
+                    <p>Duis aute dotor endrit in volup tate veilt esse cillium
+                    dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                    </p>
+                </div>
+       
+                <div class="row center">
+            
+                    <div class="col-md-6 col-lg-5">
+                        
+                        <div data-aos="fade-up">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Warranty Service</h4>
+                                    <p> Duis aute irere dolor in repreh in
+                                        volup tate velit esse cillium dolore eu fugiat
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div data-aos="fade-up">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Customer Service</h4>
+                                    <p> Duis aute irere dolor in repreh in
+                                        volup tate velit esse cillium dolore eu fugiat
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div data-aos="fade-up">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fas fa-fingerprint"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Secured Dervice</h4>
+                                    <p> Duis aute irere dolor in repreh in
+                                        volup tate velit esse cillium dolore eu fugiat
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div data-aos="fade-up">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>No Virus Threat</h4>
+                                    <p> Duis aute irere dolor in repreh in
+                                        volup tate velit esse cillium dolore eu fugiat
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+   <section class="services" id="services">
+        <div class="container-fluid">
+            
+            <div class="services-main">
+                <div class="services-tag">
+                    <p class="divider">OUR SERVICES</p>
+                </div>
+                <div class="services-heading">
+                    <h1>Our Efficient Solution</h1>
+                </div>
+                <div class="services-content">
+                    <p class="para-head">
+                        Duis aute dotor endrit in volup tate veilt esse cillium
+                        dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                    </p>
+                </div>
+            </div>
+
+            <div class="row center">
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-right">
+                        <div class="card-img">
+                            <img src="images/laptopr.webp" alt="laptop-repaire" loading="lazy">
+                            <div class="card-icon">
+                                <i class="fas fa-laptop"></i></i>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <h4>Laptop repair</h4>
+                            <p  class="para-head">
+                                Duis aute dotor endrit in volup tate veilt esse cillium
+                                dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                            </p>
+                            <button class="pBtn">
+                                <span> Repaire Now </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-up">
+                        <div class="card-img">
+                            <img src="images/phoner.webp" alt="phone-repare" loading="lazy">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <h4>Mobile repair</h4>
+                            <p class="para-head">
+                                Duis aute dotor endrit in volup tate veilt esse cillium
+                                dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                            </p>
+                            <button class="pBtn">
+                                <span> Repaire Now </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-left">
+                        <div class="card-img">
+                            <img src="images/contact.webp" alt="contact-us" loading="lazy">
+                            <div class="card-icon">
+                                <i class="fas fa-tablet-alt"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <h4>Tablet repair</h4>
+                            <p class="para-head">
+                                Duis aute dotor endrit in volup tate veilt esse cillium
+                                dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                            </p>
+                            <button class="pBtn">
+                                <span> Repare Now </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   </section>
+
+   <section class="faq" id="faq">
+        <div class="container-fluid">
+            
+            <div class="row center">
+                <div class="col-sm-12 col-md-6 col-lg-5">
+                    <div class="faq-left">
+                        <div class="faq-tag">
+                            <p class="dividerL">
+                                HAVE QUESTIONS
+                            </p>
+                        </div>
+                        <div class="faq-heading">
+                            <h1>Frequently Asked Question</h1>
+                        </div>
+                        <div class="faq-content">
+                            <p class="para-head">
+                                There are many variations of passengers of lorum
+                                lopsum available, but the majority have suffered
+                                attraction in some form. By injected randomised words 
+                                which don't look even slightly believable. There are many
+                                variations of passengers of lorum ipsum available but the majority
+                                have suffered aletration.
+                            </p>
+                            <p class="para-head">
+                                There are many variations of passengers of lorum
+                                lopsum available, but the majority have suffered
+                                attraction in some form. By injected randomised words 
+                                which don't look even slightly believable. There are many
+                                variations 
+                            </p>
+
+                            <button class="pBtn">
+                                <span> Ask Questions Here </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-5">
+                    <div class="faq-right slide-in-right" data-aos>
+                        <div class="accordion" >
+                            <div class="accordion-items">
+                                <div class="accordion-title">
+                                    <span>Can you clean my phone or device</span>
+                                    <span class="status"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+                                        There are many variations of passengers of lorum
+                                        lopsum available, but the majority have suffered
+                                        attraction in some form. By injected randomised words 
+                                        which don't look even slightly believable.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-items ">  
+                                <div class="accordion-title">
+                                    <span>Do you offer a warranty?</span>
+                                    <span class="status"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+                                        There are many variations of passengers of lorum
+                                        lopsum available, but the majority have suffered
+                                        attraction in some form. By injected randomised words 
+                                        which don't look even slightly believable.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-items">    
+                                <div class="accordion-title">
+                                    <span>How many locations do you have</span>
+                                    <span class="status"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+                                        There are many variations of passengers of lorum
+                                        lopsum available, but the majority have suffered
+                                        attraction in some form. By injected randomised words 
+                                        which don't look even slightly believable.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-items">    
+                                <div class="accordion-title">
+                                    <span>Is there a charge for the loaner phone service?</span>
+                                    <span class="status"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+                                        There are many variations of passengers of lorum
+                                        lopsum available, but the majority have suffered
+                                        attraction in some form. By injected randomised words 
+                                        which don't look even slightly believable.
+                                    </p>
+                                </div>
+                            </div>    
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</section>
+
+<section class="stat-fotter">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="fotter-items">
+                            <h1>20+</h1>
+                            <p>Gloripous years</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="fotter-items">
+                            <h1>2k+</h1>
+                            <p>Happy Customer</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="fotter-items">
+                            <h1>5k+</h1>
+                            <p>Service Complete</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="fotter-items">
+                            <h1>99%</h1>
+                            <p>Satisfactions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+</section>
+
+<section class="testimony" id="testimony">
+    <div class="container-fluid">
+        
+        <div class="testimony-con slide-in-left" data-aos>
+            
+            <div class="testimony-tag">
+                <p class="dividerL"> OUR HAPPY CLIENTS</p>
+            </div>
+            <div class="testimony-heading">
+                <h1>Our Customers Review</h1>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="testimony-slide">
+                            <div class="testimony-content">
+                                <div class="testimony-img">
+                                    <img src="images/person1.webp" alt="person" loading="lazy">
+                                </div>
+                                <div class="testimony-text">
+                                    <span>
+                                        <i class="fas fa-quote-right custom-quote"></i>
+                                    </span>
+                                    <p>
+                                        Sed ut perspiciatis unde iste natus error sit laundantium, rem aperian, eaque quae illo inventore
+                                        veritatis beatae dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui 
+                                        dolorem ipsum qia dolor sit amet.
+                                    </p>
+                                    <h4>Jhon Doe</h4>
+                                    <p class="expertise">Videographer</p>
+                                </div>
+                            </div>
+                        </article>
+            
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="testimony-slide">
+                            <div class="testimony-content">
+                                <div class="testimony-img">
+                                    <img src="images/person2.webp" alt="person" loading="lazy">
+                                </div>
+                                <div class="testimony-text">
+                                    <span>
+                                        <i class="fas fa-quote-right custom-quote"></i>
+                                    </span>
+                                    <p>
+                                        Sed ut perspiciatis unde iste natus error sit laundantium, rem aperian, eaque quae illo inventore
+                                        veritatis beatae dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui 
+                                        dolorem ipsum qia dolor sit amet.
+                                    </p>
+                                    <h4>Jhon Doe</h4>
+                                    <p class="expertise">Videographer</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="testimony-slide">
+                            <div class="testimony-content">
+                                <div class="testimony-img">
+                                    <img src="images/person1.webp" alt="person" loading="lazy">
+                                </div>
+                                <div class="testimony-text">
+                                    <span>
+                                        <i class="fas fa-quote-right custom-quote"></i>
+                                    </span>
+                                    <p>
+                                        Sed ut perspiciatis unde iste natus error sit laundantium, rem aperian, eaque quae illo inventore
+                                        veritatis beatae dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui 
+                                        dolorem ipsum qia dolor sit amet.
+                                    </p>
+                                    <h4>biniam Doe</h4>
+                                    <p class="expertise">Videographer</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <button class="swiper-next"><i class="fas fa-arrow-left"></i></button>
+                <button class="swiper-previous"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+<section class="skills">
+    <div class="container-fluid">
+        <div class="row center">
+            <div class="col-12 col-sm-6 col-lg-5">
+                <div class="skills-left">
+                    <div class="skills-tag">
+                        <p class="dividerL">
+                            OUR SKILLS & EXPERTISE
+                        </p>
+                    </div>
+                    <div class="heading">
+                        <h1>We Specialize In Quick & Professional Repairs</h1>
+                    </div>
+                    <div class="skills-content">
+                        <p class="para-head">
+                            There are many variations of passengers of lorum
+                            lopsum available, but the majority have suffered
+                            attraction in some form. By injected randomised words 
+                            which don't look even slightly believable.
+                        </p>
+                        <p class="para-head">
+                            There are many variations of passengers of lorum
+                            lopsum available, but the majority have suffered
+                            attraction in some form. By injected randomised words 
+                            which don't look even slightly believable.
+                        </p>
+                    </div>
+                    <div class="skills-progress">
+                        <div class="progress-bar">
+                            <div class="progress-level">
+                                <span>Diagonstics</span>
+                                <span>84%</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-level">
+                                <span>Replacemnet</span>
+                                <span>96%</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-level">
+                                <span>Device Repaire</span>
+                                <span>82%</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-12 col-sm-6 col-lg-5">
+                <div class="skills-right slide-in-right" data-aos="" data-aos-offset="0">
+                    <div class="skills-overlay">
+                        Improve gadget smartphone laptop Repaire
+                        services
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container-fluid">
+        <div class="contact-content">
+            <div class="contact-tag">
+                <p class="divider">CONTACT US</p>
+            </div>
+            <div class="contact-heading">
+                <h1>Let Us Know Or Call Us At</h1>
+            </div>
+            <div class="main">
+                <p class="para-head">
+                    Duis aute irute dotor in repreh enderit in vulup
+                    tate veit esse ceilum dolors eu fugiat ruitla dotor
+                    atur with Lorem ipsum is simply
+                </p>
+            </div>
+            <form action="">
+                <div class="contact-form">
+                
+                        <div class="fields">
+                            <div class="input-group">
+                                <input type="text" placeholder id="a">
+                                <label for="a">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" placeholder id="b">
+                                <label for="b">Email Address</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" placeholder id="c">
+                                <label for="c">Subject</label>
+                            </div>
+                            
+                        </div>
+                        <div class="comment">
+                            <div class="input-group">
+                                <textarea name="" id="" rows="10" placeholder></textarea>
+                                <label for="">Put your thouths</label>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button class="pBtn">
+                                <span> Send Message</span>
+                            </button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="blog" id="blog">
+    <div class="container-fluid">
+
+        <div class="blog-main">
+                <div class="blog-tag">
+                    <p class="divider">FROM OUR BLOG</p>
+                </div>
+                <div class="blog-heading">
+                    <h1>News And Articles</h1>
+                </div>
+                <div class="blog-content">
+                    <p class="para-head">
+                        Duis aute dotor endrit in volup tate veilt esse cillium
+                        dolore eu fugiat nutla dotor atur with lorem ipsum simply
+                    </p>
+                </div>
+        </div>
+
+        
+        <div class="row center">
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-right" >
+                        <div class="card-img">
+                            <img src="images/best-phone.webp" alt="best-phone" loading="lazy">
+                            <div class="card-icon">
+                                <span>+</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="card-date">
+                                <span><i class="fas fa fa-calendar-alt"></i> 26 AUG 2025</span>
+                                <span><i class="fas fa fa-comment-alt"></i> 02 COMMENTS </span>
+                            </div>
+                            <h4>What Is The Best Affordable Android Phone In 2025</h4>
+                            <button class="pBtn">
+                                <span> Read More </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-up">
+                        <div class="card-img">
+                            <img src="images/broken-screen.webp" alt="phone-screen" loading="lazy">
+                            <div class="card-icon">
+                                <span>+</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="card-date">
+                                <span><i class="fas fa fa-calendar-alt"></i> 26 AUG 2025</span>
+                                <span><i class="fas fa fa-comment-alt"></i> 02 COMMENTS</span>
+                            </div>
+                            <h4>How To Fix Broken Screen On YourLaptop</h4>
+                            <button class="pBtn">
+                                <span> Read More </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <div class="card-box" data-aos="fade-left">
+                        <div class="card-img">
+                            <img src="images/broken-mobile.webp" alt="broken-mobile" loading="lazy">
+                            <div class="card-icon">
+                                <span>+</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="card-date">
+                                <span><i class="fas fa fa-calendar-alt"></i> 26 AUG 2025</span>
+                                <span><i class="fas fa fa-comment-alt"></i> 02 COMMENTS</span>
+                            </div>
+                            <h4>How To Fix Broken Back Glass On Your Phone</h4>
+                            <button class="pBtn">
+                                <span>Read More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</section>
+
+<section class="subscribe">
+    <div class="container-fluid">
+        <div class="subscribe-header">
+            <p class="divider">CONTACT US</p>
+            <h1>Let Us Know Or Call Us At</h1>
+            <p class="para-head">
+            
+                Duis aute dotor endrit 
+                in volup tate veilt esse cillium
+                dolore eu fugiat nutla dotor atur with lorem ipsum simply
+            </p>
+        </div>
+        <div class="subscriobe-form">
+            <form action="">
+                <div class="email-fl">
+                    <input type="email" name="" id="" placeholder="Enter Your Email">
+                    <button class="pBtn">
+                        <span> Subscribe Now </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<footer class="foter">
+    <div class="container-fluid">
+        <div class="row center">
+
+            <div class="col-sm-12 col-md-3">
+                <div class="foter-logo">
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -35 250 130" role="img" aria-label="Efix mobile phone logo">
+                <style>
+                    .wf { stroke: var(--primary-color); fill: transparent; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+                    .t { fill: #ffffff; font: 700 60px/1 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+                </style>
+
+                <g>
+                    <!-- Phone -->
+                    <rect class="wf" x="0" y="0" width="60" height="90" rx="12"/>
+                    <rect class="wf" x="10" y="10" width="40" height="60" rx="6"/>
+                    <line class="wf" x1="20" y1="5" x2="40" y2="5"/>
+                    <circle class="wf" cx="30" cy="80" r="4"/>
+                    <line class="wf" x1="60" y1="25" x2="65" y2="25"/>
+                    <line class="wf" x1="60" y1="40" x2="65" y2="40"/>
+
+                    <!-- Text -->
+                    <text class="t" x="70" y="65">Efix</text>
+                </g>
+            </svg>
+                    </div>
+                    <div class="sub-logo">
+                        <div class="logo-p">
+                            Duis aute dotor endrit in volup tate veilt esse cillium dolore
+                            eu fugiat nutla dotor atur with lorem ipsum simply
+                        </div>
+                        <div class="social-icons">
+                            <h4>Stay Connected</h4>
+                            <div>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-pinterest"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-3">
+                <div class="foter-nav">
+                    <h4> Quick Links</h4>
+                    <div class="fot-links">
+                        <a href="#"><i class="fas fa-play"></i>  Home</a>
+                        <a href="#"><i class="fas fa-play"></i>  About Us</a>
+                        <a href="#"><i class="fas fa-play"></i>  Services</a>
+                        <a href="#"><i class="fas fa-play"></i>  Blog</a>
+                        <a href="#"><i class="fas fa-play"></i>  Contac Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <div class="foter-nav">
+                    <h4> Our Services</h4>
+                    <div class="fot-links">
+                        <a href="#"><i class="fas fa-play"></i> Smartphone Reapair</a>
+                        <a href="#"><i class="fas fa-play"></i>  Laptop Repaire</a>
+                        <a href="#"><i class="fas fa-play"></i>  Desktop Repaire</a>
+                        <a href="#"><i class="fas fa-play"></i>  Tablet Repaire</a>
+                        <a href="#"><i class="fas fa-play"></i>  Smart Watch Repaire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <div class="foter-contact">
+                    <h4>Contact Us</h4>
+                    <div class="fot-contact">
+                        
+                        <div>
+                            <i class="fas fa-road"></i>
+                            <span> Jinja road, Kampala <br>
+                               Uganda
+                            </span>
+                        </div>
+                        
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>
+                                256 723 444 88 <br>
+                                256 123 431 99
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                support@company.com <br>
+                                company@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <div class="copyright">
+            @ 2023 Copyright by <span>Biniam</span>
+    </div>
+
+    <i id="backTop" class="fas fa-arrow-up"></i>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="wscript.js"> </script>
+
+</body>
+</html>
