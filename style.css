@@ -305,13 +305,19 @@
     /* Style for hero sectionn */
 
     .hero-page{
-        background-image: url("images/hero.jpg");
+        background-image: url("images/hero.webp");
         background-color: rgba(70, 14, 15, 0.9);
         background-blend-mode:soft-light;
         min-height: 100vh;
         background-size: cover;
         background-position: center;
         position: relative;
+    }
+
+    @media (max-width: 500px){
+       .hero-page {
+        background-image: url("images/hero-m.webp");
+       }
     }
 
 
@@ -558,7 +564,7 @@
     }
 
     .intro-left-content{
-        background-image: url("images/phone.jpg");
+        background-image: url("images/phone.webp");
         background-size: cover;
         background-position: center;
         min-height: 100%;
@@ -982,13 +988,18 @@
     
     .stat-fotter{
         padding: var(--row-split) 1rem;
-        background-image: url(images/fixed-bg.jpg);
+        background-image: url(images/fixed-bg.webp);
         background-position: center;
         background-size: cover;
         background-attachment: scroll;
         background-color: rgba(70, 14, 15, 0.9);
-        background-blend-mode:soft-light;
-        
+        background-blend-mode:soft-light;        
+    }
+
+    @media (max-width: 500px){
+        .stat-fotter{
+            background-image: url(images/fixed-bg-m.webp);
+        }
     }
 
      .fotter-items{
@@ -1268,12 +1279,12 @@
         padding-top: var(--row-split);
         padding-bottom: var(--row-split);
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
-                         url("images/subscribe1.jpg");
+                         url("images/subscribe1.webp");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
-    }    
-
+    }
+    
     .contact-tag{
         text-align: center;
     }
@@ -1322,7 +1333,7 @@
     .input-group label{
         position: absolute;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
-                         url("images/subscribe1.jpg");
+                         url("images/subscribe1.webp");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -1334,6 +1345,14 @@
         transition: 0.3s;
         pointer-events: none;
     }
+
+    @media (max-width: 500px){
+        .contact, .input-group label{
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
+                         url("images/subscribe1-m.webp");
+        }
+    }
+
 
     .input-group input:focus + label, 
      input:not(:placeholder-shown) + label,
@@ -1456,12 +1475,18 @@
 
     .subscribe{
         padding: var(--row-split) 0;
-        background-image: url(images/subscribe3.jpg);
+        background-image: url(images/subscribe3.webp);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
         background-color: rgba(70, 14, 15, 0.9);
         background-blend-mode:soft-light;
+    }
+
+    @media (max-width: 500px){
+        .subscribe{
+            background-image: url(images/subscribe3-m.webp);
+        }
     }
 
     .subscribe-header{
