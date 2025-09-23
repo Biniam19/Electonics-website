@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Efix mobile phone logo">
+  <g fill="none" stroke="#D03437" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Phone Body -->
+    <rect x="4" y="2" width="40" height="60" rx="8"/>
+    <rect x="10" y="10" width="28" height="40" rx="4"/>
+    <line x1="16" y1="6" x2="32" y2="6"/>
+    <circle cx="24" cy="54" r="3"/>
+    <!-- Side Buttons -->
+    <line x1="44" y1="16" x2="48" y2="16"/>
+    <line x1="44" y1="28" x2="48" y2="28"/>
+  </g>
+</svg>

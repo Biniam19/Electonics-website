@@ -16,8 +16,6 @@
         })
     });
 
-    
-
     faqBtn.addEventListener("click", () => {
         popupCon.classList.add("display-faq");
         keepOne(popupReport);
@@ -52,7 +50,6 @@
         } 
         
     }
-
 })();
 
 
