@@ -203,7 +203,7 @@
             position: absolute;
             color: black;
             top: 4.15rem;
-            width: 70%;
+            width: 100%;
             height: calc(100vh - 3.5rem);
             left: 0;
             flex-direction: column;
@@ -761,6 +761,10 @@
             transition: 0.3s;
         }
 
+        .choose .card .content{
+            min-height: 80px;
+        }
+
         .choose .icon i{
             background: var(--pure-white);
             color: var(--primary-color);
@@ -1294,12 +1298,12 @@
         color: white;
     }
 
-    .contact-form{
+     .contact-form{
         max-width: 900px;
         margin: 1.5rem auto;
     }
 
-    .fields, .comment, .btn{
+    .contact .fields, .contact .comment, .contact .btn{
         display: flex;
         justify-content: center;
         gap:  1.5rem;
@@ -1330,24 +1334,27 @@
         
     }
 
-    .input-group label{
-        position: absolute;
+    .contact .input-group label{
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
                          url("images/subscribe1.webp");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
+    }
+
+    .input-group label{
+        position: absolute;
         left: 0.8rem;
         top: 0.6rem;
         color: var(--light-text);
-        font-size: 0.9rem;
+        font-size: 1rem;
         z-index: 2;
         transition: 0.3s;
         pointer-events: none;
     }
 
     @media (max-width: 500px){
-        .contact, .input-group label{
+        .contact, .contact .input-group label{
             background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
                          url("images/subscribe1-m.webp");
         }
@@ -1359,8 +1366,8 @@
     .input-group textarea:focus + label,
     textarea:not(:placeholder-shown) + label
      {
-        top: -0.6rem;
-        font-size: 0.8rem;
+        top: -0.5rem;
+        font-size: 0.9rem;
         padding: 0 0.5rem;
         color: var(--primary-color);
     }
@@ -1491,6 +1498,8 @@
 
     .subscribe-header{
         text-align: center;
+        max-width: 600px;
+        margin-inline: auto;
         color: var(--pure-white);
     }
 
@@ -1655,3 +1664,96 @@
     #backTop.active{
         transform: scale(1);
     }
+
+
+/* styles for the pop up form*/
+
+.popup-con{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
+      padding: 1rem; 
+      opacity: 0;
+      pointer-events: none;
+      align-content: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: backdrop-filter 0.5s ease;
+}
+
+.popup-con.display-faq, .popup-con.display-report{
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: blur(6px);
+}
+
+.hide-popup{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    padding: 1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hide-popup i{
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    
+}
+
+.popup-faq, .popup-report{
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    background: var(--pure-white);
+    max-width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    opacity: 0;
+    transform: scale(0);
+    padding: 0.1rem 2rem;
+    border-radius: 12px;
+    margin-inline: auto;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.popup-con.display-faq .popup-faq,
+.popup-con.popup-con.display-report .popup-report{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup-con .contact-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.popup-con .fields{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.popup-con label{
+    background: white;
+}
+
+.popup-con .input-group input, .popup-con .comment textarea{
+color: var(--light-darkgray);
+}
+
+.popup-con .pBtn{
+    margin-top: 0;
+    width: 100%;
+}
+

@@ -1,3 +1,88 @@
+//function for showing and hiding pop up forms
+
+(function (){
+    let hidePopup = document.querySelector(".hide-popup")
+    let repairBtn = document.querySelectorAll(".repair-btn");
+    let faqBtn = document.querySelector(".faq-btn");
+    let popupCon = document.querySelector(".popup-con");
+    let popupFaq = document.querySelector(".popup-faq");
+    let popupReport = document.querySelector(".popup-report");
+    const POPUPCLASSES = ['display-faq', 'display-report'];
+
+    repairBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            popupCon.classList.add("display-report");
+            keepOne(popupFaq);
+        })
+    });
+
+    
+
+    faqBtn.addEventListener("click", () => {
+        popupCon.classList.add("display-faq");
+        keepOne(popupReport);
+    })
+
+    hidePopup.addEventListener("click", () => {
+        removeClass(POPUPCLASSES);
+    })
+
+    popupCon.addEventListener("click", (e) => {
+        if(!( popupFaq.contains(e.target) ||  popupReport.contains(e.target) )){
+            removeClass(POPUPCLASSES);
+        }
+    })
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            removeClass(POPUPCLASSES);
+        }
+    });
+
+    function removeClass(cl){
+        popupCon.classList.remove(...cl);
+        keepOne("", false);
+    }
+
+    function keepOne(popform, b = true){
+        if(b) popform.style.display = "none";
+        else{
+            popupFaq.style.display = "block";
+            popupReport.style.display = "block";
+        } 
+        
+    }
+
+})();
+
+
+// anynmous function for navigation buttons
+
+(function (){
+    let homeButton = document.querySelector(".home-button");
+    let introButton = document.querySelectorAll(".intro-button");
+    
+    homeButton.addEventListener("click", () => {
+        scrollIntoSection("about-us");
+    });
+
+    introButton.forEach( ele => {
+        ele.addEventListener("click", () => {
+        scrollIntoSection("contact");
+    })
+});
+
+function scrollIntoSection(id){
+    let ele = document.getElementById(id);
+    if(ele){
+        ele.scrollIntoView({behavior : "smooth"});
+        history.pushState(null, null, `#${id}`);
+    }
+}
+})();
+
+
+
 const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
     centeredSlides: true,
