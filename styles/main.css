@@ -308,7 +308,7 @@
     /* Style for hero sectionn */
 
     .hero-page{
-        background-image: url("images/hero.webp");
+        background-image: url("../images/hero.webp");
         background-color: rgba(70, 14, 15, 0.9);
         background-blend-mode:soft-light;
         min-height: 100vh;
@@ -319,7 +319,7 @@
 
     @media (max-width: 500px){
        .hero-page {
-        background-image: url("images/hero-m.webp");
+        background-image: url("../images/hero-m.webp");
        }
     }
 
@@ -567,7 +567,7 @@
     }
 
     .intro-left-content{
-        background-image: url("images/phone.webp");
+        background-image: url("../images/phone.webp");
         background-size: cover;
         background-position: center;
         min-height: 100%;
@@ -1030,7 +1030,7 @@
     
     .stat-fotter{
         padding: var(--row-split) 1rem;
-        background-image: url(images/fixed-bg.webp);
+        background-image: url(../images/fixed-bg.webp);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -1040,7 +1040,7 @@
 
     @media (max-width: 500px){
         .stat-fotter{
-            background-image: url(images/fixed-bg-m.webp);
+            background-image: url(../images/fixed-bg-m.webp);
         }
     }
 
@@ -1264,7 +1264,7 @@
    .skills-right{
         min-height: 100%;
         position: relative;
-        background-image: url("images/skill.jpg");
+        background-image: url("../images/skill.jpg");
         background-size: cover;
         background-position: center;
         background-color: rgba(70, 14, 15, 0.9);
@@ -1321,7 +1321,7 @@
         padding-top: var(--row-split);
         padding-bottom: var(--row-split);
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
-                         url("images/subscribe1.webp");
+                         url("../images/subscribe1.webp");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -1374,7 +1374,7 @@
 
     .contact .input-group label{
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
-                         url("images/subscribe1.webp");
+                         url("../images/subscribe1.webp");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -1394,7 +1394,7 @@
     @media (max-width: 500px){
         .contact, .contact .input-group label{
             background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 40%,rgba(0,0,0,0.6) 100%),
-                         url("images/subscribe1-m.webp");
+                         url("../images/subscribe1-m.webp");
         }
     }
 
@@ -1524,7 +1524,7 @@
 
     .subscribe{
         padding: var(--row-split) 0;
-        background-image: url(images/subscribe3.webp);
+        background-image: url(../images/subscribe3.webp);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -1534,7 +1534,7 @@
 
     @media (max-width: 500px){
         .subscribe{
-            background-image: url(images/subscribe3-m.webp);
+            background-image: url(../images/subscribe3-m.webp);
         }
     }
 
