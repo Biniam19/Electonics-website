@@ -2,8 +2,8 @@
 
 (function (){
     let hidePopup = document.querySelector(".hide-popup")
-    let repairBtn = document.querySelectorAll(".repair-btn");
-    let faqBtn = document.querySelector(".faq-btn");
+    let repairBtn = document.querySelectorAll(".repairBtn");
+    let faqBtn = document.querySelector(".faqBtn");
     let popupCon = document.querySelector(".popup-con");
     let popupFaq = document.querySelector(".popup-faq");
     let popupReport = document.querySelector(".popup-report");
@@ -58,9 +58,14 @@
 (function (){
     let homeButton = document.querySelector(".home-button");
     let introButton = document.querySelectorAll(".intro-button");
+    let logo = document.querySelector('.logo');
     
     homeButton.addEventListener("click", () => {
         scrollIntoSection("about-us");
+    });
+
+    logo.addEventListener("click", () => {
+        scrollIntoSection("hero-page");
     });
 
     introButton.forEach( ele => {
@@ -145,7 +150,11 @@ let isDisplay =  (function (){
         let menuToggle = document.querySelector(".menu-toggle");
         let header = document.querySelector(".page-header");
         let dr = false;
-        menuToggle.addEventListener("click", () => {
+
+        menuToggle.addEventListener("click", toggleMobileMenu)
+        
+
+        function toggleMobileMenu()  {
             
             if(navCon.classList.contains("active")){
                 navCon.classList.remove("active");
@@ -160,16 +169,30 @@ let isDisplay =  (function (){
                 menuToggle.innerHTML = '<i class="fas fa-times"></i>'
                 dr = true;
             }
-        })
+        }
 
         navCon.querySelectorAll(".menu-items").forEach( item => {
             let dropdown = item.querySelector(".dropdown-menu");
             
             if(dropdown){
+                item.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    item.classList.toggle("active");
+                })
+            } else{
                 item.addEventListener("click", () => {
-                    item.classList.toggle("active")
+                    if(window.matchMedia("(max-width: 930px)").matches)
+                       toggleMobileMenu();
                 })
             }
+
+            item.querySelectorAll(".dropdown-menu a").forEach(link => {
+                link.addEventListener("click", e => {
+                    e.stopPropagation();
+                    if(window.matchMedia("(max-width: 930px)").matches)
+                        toggleMobileMenu();
+                }); // allow normal navigation
+            });
         });
 
         return function(){
@@ -179,7 +202,7 @@ let isDisplay =  (function (){
    })();
 
   
-
+/*
    (function (){
     let accordionCon = document.querySelectorAll(".accordion");
     let accordionItems = Array.from(accordionCon).map(ele => {
@@ -208,6 +231,29 @@ let isDisplay =  (function (){
     });
    
    })();
+*/
+   (function () {
+    const accordionCon = document.querySelector(".accordion");
+    let opened = null;
+
+    // Event delegation — works for dynamically added items too
+    accordionCon.addEventListener("click", (e) => {
+        const titleBtn = e.target.closest(".accordion-title");
+        if (!titleBtn) return; // Clicked outside any accordion title
+
+        const item = titleBtn.closest(".accordion-items");
+        const allItems = accordionCon.querySelectorAll(".accordion-items");
+
+        // Remove "active" from all others
+        allItems.forEach((ele, i) => {
+            if (ele !== item) ele.classList.remove("active");
+        });
+
+        // Toggle the current one
+        item.classList.toggle("active");
+    });
+})();
+
 
 AOS.init({
     duration: 1000, // animation duration

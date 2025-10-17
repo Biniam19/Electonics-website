@@ -12,7 +12,7 @@
     <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml"/>
 
     <link rel="stylesheet" href="flex-layout.css">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
 
 </head>
 <body">
@@ -50,7 +51,7 @@
         <nav class="nav-con">
             <ul class="nav-menu">
                 <li class="menu-items">
-                   <div class="con-link"> <a href="" class="nav-link">HOME</a> </div>
+                   <div class="con-link"> <a href="#hero-page" class="nav-link">HOME</a> </div>
                 </li>
                 <li class="menu-items">
                     <div class="con-link"> <a href="#about-us" class="nav-link">ABOUT</a></div>
@@ -62,10 +63,10 @@
                         <i class="fas fa-angle-right"></i>
                     </div>
                     <ul class="dropdown-menu">
-                        <li class="dropdown-content"><a href="#" class="drop-link">Team</a> <i class="fas fa-angle-right"></i></li>
-                        <li class="dropdown-content"><a href="#" class="drop-link">Pricing</a> <i class="fas fa-angle-right"></i></li>
-                        <li class="dropdown-content"><a href="#" class="drop-link">Appointment</a> <i class="fas fa-angle-right"></i></li>
-                        <li class="dropdown-content"><a href="#" class="drop-link">Gallery</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="javascript:void(0)" class="drop-link">Team</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="javascript:void(0)" class="drop-link">Pricing</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="javascript:void(0)" class="drop-link">Appointment</a> <i class="fas fa-angle-right"></i></li>
+                        <li class="dropdown-content"><a href="javascript:void(0)" class="drop-link">Gallery</a> <i class="fas fa-angle-right"></i></li>
                         <li class="dropdown-content"><a href="#faq" class="drop-link">FAQS</a> <i class="fas fa-angle-right"></i></li>
                     </ul>
                 </li>
@@ -380,8 +381,9 @@
             <p class="para-head">
               Screen damage, slow performance, or overheating? We fix it all with care and precision.
             </p>
-            <button class="pBtn repair-btn">
+            <button class="pBtn repairBtn">
               <span>Repair Now</span>
+              <div class="loader"></div>
             </button>
           </div>
         </div>
@@ -402,8 +404,9 @@
             <p class="para-head">
               Cracked screens, battery issues, or software glitches—get your phone working like new.
             </p>
-            <button class="pBtn repair-btn">
+            <button class="pBtn repairBtn">
               <span>Repair Now</span>
+              <div class="loader"></div>
             </button>
           </div>
         </div>
@@ -424,8 +427,9 @@
             <p class="para-head">
               From broken touchscreens to charging issues, we restore tablets to perfect condition.
             </p>
-            <button class="pBtn repair-btn">
+            <button class="pBtn repairBtn">
               <span>Repair Now</span>
+              <div class="loader"></div>
             </button>
           </div>
         </div>
@@ -463,8 +467,9 @@
                             </p>
                             
 
-                            <button class="pBtn faq-btn">
+                            <button class="pBtn faqBtn">
                                 <span> Ask Questions Here </span>
+                                <div class="loader"></div>
                             </button>
                         </div>
                     </div>
@@ -473,11 +478,34 @@
                 <div class="col-sm-12 col-md-6 col-lg-5">
                     <div class="faq-right slide-in-right" data-aos>
                         <div class="accordion" >
+                            
+                            <div class="dots faq-loaders" style="--accent:#D03437; display:flex; gap:8px; align-items:center;">
+                                <div style="width:12px; height:12px; border-radius:50%; background:var(--accent,#D03437); animation:dots 0.9s infinite ease-in-out"></div>
+                                <div style="width:12px; height:12px; border-radius:50%; background:var(--accent,#D03437); animation:dots 0.9s infinite ease-in-out; animation-delay:0.12s"></div>
+                                <div style="width:12px; height:12px; border-radius:50%; background:var(--accent,#D03437); animation:dots 0.9s infinite ease-in-out; animation-delay:0.24s"></div>
+                            </div>    
+                            
+                            <!-- This is a comment 
                             <div class="accordion-items">
-                                <div class="accordion-title">
+                                <button class="accordion-title">
                                     <span>Can you clean my phone or device</span>
                                     <span class="status"></span>
+                                </button>
+                            <div class="accordion-content">
+                                    <p>
+                                        There are many variations of passengers of lorum
+                                        lopsum available, but the majority have suffered
+                                        attraction in some form. By injected randomised words 
+                                        which don't look even slightly believable.
+                                    </p>
                                 </div>
+                            </div>
+
+                            <div class="accordion-items">
+                                <button class="accordion-title">
+                                    <span>Can you clean my phone or device</span>
+                                    <span class="status"></span>
+                                </button>
                                 <div class="accordion-content">
                                     <p>
                                         There are many variations of passengers of lorum
@@ -489,10 +517,10 @@
                             </div>
                             
                             <div class="accordion-items ">  
-                                <div class="accordion-title">
+                                <button class="accordion-title">
                                     <span>Do you offer a warranty?</span>
                                     <span class="status"></span>
-                                </div>
+                                </button>
                                 <div class="accordion-content">
                                     <p>
                                         There are many variations of passengers of lorum
@@ -504,10 +532,10 @@
                             </div>
                             
                             <div class="accordion-items">    
-                                <div class="accordion-title">
+                                <button class="accordion-title">
                                     <span>How many locations do you have</span>
                                     <span class="status"></span>
-                                </div>
+                                </button>
                                 <div class="accordion-content">
                                     <p>
                                         There are many variations of passengers of lorum
@@ -519,10 +547,10 @@
                             </div>
                             
                             <div class="accordion-items">    
-                                <div class="accordion-title">
+                                <button class="accordion-title">
                                     <span>Is there a charge for the loaner phone service?</span>
                                     <span class="status"></span>
-                                </div>
+                                </button>
                                 <div class="accordion-content">
                                     <p>
                                         There are many variations of passengers of lorum
@@ -533,6 +561,7 @@
                                 </div>
                             </div>    
                            
+                        -->
                         </div>
 
                     </div>
@@ -729,33 +758,37 @@
                 with expert advice and reliable repair solutions
                 </p>
             </div>
-            <form action="">
+            <form action="" id="commentForm">
                 <div class="contact-form">
                 
                         <div class="fields">
                             <div class="input-group">
-                                <input type="text" placeholder maxlength="50" id="a" required>
+                                <input type="text" name="name" placeholder="" maxlength="50" id="commentField" required>
                                 <label for="a">Your Name</label>
                             </div>
                             <div class="input-group">
-                                <input type="email" placeholder id="b" required>
+                                <input type="email" name="email" placeholder id="b" required>
                                 <label for="b">Email Address</label>
                             </div>
                             <div class="input-group">
-                                <input type="text" placeholder id="c" maxlength="80" required>
+                                <input type="text" name="subject" placeholder id="subjectArea" maxlength="80" required>
                                 <label for="c">Subject</label>
                             </div>
                             
                         </div>
                         <div class="comment">
                             <div class="input-group">
-                                <textarea name="" id="" rows="10" maxlength="300" required placeholder></textarea>
+                                <textarea  id="commentArea" name="comment" rows="10" maxlength="300" required placeholder=""></textarea>
                                 <label for="">Put your thouths</label>
                             </div>
                         </div>
+
+                        <div id="commentCaptcha" style="display: table; margin: auto;"></div>
+
                         <div class="btn">
-                            <button class="pBtn" type="submit">
+                            <button class="pBtn commentBtn" type="submit">
                                 <span> Send Message</span>
+                                <div class="loader"></div>
                             </button>
                         </div>
                 </div>
@@ -872,14 +905,19 @@
                 Enter your email below to subscribe and never miss an update!
             </p>
         </div>
-        <div class="subscriobe-form">
-            <form action="">
+        <div class="subscribeForm">
+            <form action="" id="subscribeForm" style="display: table;margin: auto">
                 <div class="email-fl">
-                    <input type="email" name="" id="" placeholder="Enter Your Email">
-                    <button class="pBtn">
+                    <input type="email" name="email" id="" required placeholder="Enter Your Email">
+
+                    <div id="subscribeCaptcha" style="display: table;"></div>
+                    
+                    <button class="pBtn subscribeBtn " type="submit">
                         <span> Subscribe Now </span>
+                        <div class="loader"></div>
                     </button>
                 </div>
+                
             </form>
         </div>
     </div>
@@ -915,8 +953,8 @@
                     </div>
                     <div class="sub-logo">
                         <div class="logo-p">
-                            Duis aute dotor endrit in volup tate veilt esse cillium dolore
-                            eu fugiat nutla dotor atur with lorem ipsum simply
+                            Leading the way in innovative electronics solutions. 
+                            Discover high-quality products designed to make your life smarter and easier.
                         </div>
                         <div class="social-icons">
                             <h4>Stay Connected</h4>
@@ -935,11 +973,11 @@
                 <div class="foter-nav">
                     <h4> Quick Links</h4>
                     <div class="fot-links">
-                        <a href="#"><i class="fas fa-play"></i>  Home</a>
-                        <a href="#"><i class="fas fa-play"></i>  About Us</a>
-                        <a href="#"><i class="fas fa-play"></i>  Services</a>
-                        <a href="#"><i class="fas fa-play"></i>  Blog</a>
-                        <a href="#"><i class="fas fa-play"></i>  Contac Us</a>
+                        <a href="#hero-page"><i class="fas fa-play"></i>  Home</a>
+                        <a href="#about-us"><i class="fas fa-play"></i>  About Us</a>
+                        <a href="#services"><i class="fas fa-play"></i>  Services</a>
+                        <a href="#blog"><i class="fas fa-play"></i>  Blog</a>
+                        <a href="#contact"><i class="fas fa-play"></i>  Contac Us</a>
                     </div>
                 </div>
             </div>
@@ -947,11 +985,11 @@
                 <div class="foter-nav">
                     <h4> Our Services</h4>
                     <div class="fot-links">
-                        <a href="#"><i class="fas fa-play"></i> Smartphone Reapair</a>
-                        <a href="#"><i class="fas fa-play"></i>  Laptop Repaire</a>
-                        <a href="#"><i class="fas fa-play"></i>  Desktop Repaire</a>
-                        <a href="#"><i class="fas fa-play"></i>  Tablet Repaire</a>
-                        <a href="#"><i class="fas fa-play"></i>  Smart Watch Repaire</a>
+                        <a href="#services"><i class="fas fa-play"></i> Smartphone Reapair</a>
+                        <a href="#services"><i class="fas fa-play"></i>  Laptop Repaire</a>
+                        <a href="#services"><i class="fas fa-play"></i>  Desktop Repaire</a>
+                        <a href="#services"><i class="fas fa-play"></i>  Tablet Repaire</a>
+                        <a href="#services"><i class="fas fa-play"></i>  Smart Watch Repaire</a>
                     </div>
                 </div>
             </div>
@@ -1004,31 +1042,34 @@
         <i class="fas fa-times"></i>
     </div>
 
-    <div class="popup-faq">
-        <form action="">
+        <div class="popup-faq">
+        <form action="" id="faqForm">
             <div class="contact-form">
 
                             <h2>Ask Questions</h2>
                             <div class="fields">
                                 <div class="input-group">
-                                    <input type="text" placeholder maxlength="50" id="a" required>
+                                    <input type="text" name="name" placeholder maxlength="50" id="a" required>
                                     <label for="a">Name</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" placeholder id="b" required>
+                                    <input type="email" name="email" placeholder id="b" required>
                                     <label for="b">Email Address</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" placeholder maxlength="80" id="c" required>
+                                    <input type="text" placeholder name="faqTitle" maxlength="80" id="c" required>
                                     <label for="c">Question title</label>
                                 </div>
                             </div>
                             <div class="comment">
                                 <div class="input-group">
-                                    <textarea name="" id="" rows="10" maxlength="300" required placeholder></textarea>
+                                    <textarea id="" rows="10" maxlength="300" name="faqDetails"  required placeholder></textarea>
                                     <label for="">Descripton</label>
                                 </div>
                             </div>
+
+                            <div id="faqCaptcha"></div>
+
                             <div class="btn">
                                 <button class="pBtn" type="submit">
                                     <span> Send Message</span>
@@ -1038,44 +1079,61 @@
         </form>
     </div>
 
+    
     <div class="popup-report" >
-        <form action="">
+        <form action=" " id="reportForm" >
             <div class="contact-form">
 
                             <h2>Report a Device Issue</h2>
                             <div class="fields">
                                 <div class="input-group">
-                                    <input type="text" placeholder maxlength="50" required>
+                                    <input type="text" name="name" placeholder maxlength="50" required>
                                     <label for="a">Name</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" placeholder required>
+                                    <input type="email" name="email" placeholder required>
                                     <label for="b">Email Address</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" placeholder maxlength="80"  required>
+                                    <input type="text" name="issueTitle" placeholder maxlength="80"  required>
                                     <label for="c">Issue title</label>
                                 </div>
                             </div>
                             <div class="comment">
                                 <div class="input-group">
-                                    <textarea name="" id="" rows="10" maxlength="300" required placeholder></textarea>
+                                    <textarea id="" name="issueDetail" rows="10" maxlength="300" required placeholder></textarea>
                                     <label for="">Descripton of the Issue</label>
                                 </div>
                             </div>
+
+                            <div id="reportCaptcha"></div>
+                            
                             <div class="btn">
                                 <button class="pBtn" type="submit">
                                     <span> Send Message</span>
                                 </button>
                             </div>
+                            
                 </div>
         </form>
     </div>
 
 </div>
 
+<div id="statusPopup" class="statusPopup">
+    <div class="displayAlert">
+        <i class="fas fa-check-circle successIcon" style="color: #27ae60"></i>
+        <i class="fas fa-times-circle errorIcon" style="color: #e74c3c"></i>
+        <span class="popup-message"> biniam</span>
+    </div>
+</div>
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="wscript.js?v=2"> </script>
+<script src="wscript.js?v=3"> </script>
+<script src="dataFetch.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit" async defer></script>
 
 </body>
 </html>

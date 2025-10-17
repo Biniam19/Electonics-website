@@ -56,6 +56,9 @@
         to{transform: translateY(0);}
         }
 
+    .logo{
+        cursor: pointer;
+    }
     
     
     .logo svg{
@@ -80,7 +83,7 @@
 
     .nav-con a{
         text-decoration: none;
-        
+        flex-grow: 1;
     }
     
     .nav-menu{
@@ -89,13 +92,12 @@
 
     .menu-items{
         position: relative;
-        
     }
 
     .con-link{
         display: flex;
         justify-content: space-between;
-       cursor: pointer;
+        cursor: pointer;
     }
     
    
@@ -203,12 +205,13 @@
             position: absolute;
             color: black;
             top: 4.15rem;
-            width: 100%;
+            width: 70%;
             height: calc(100vh - 3.5rem);
             left: 0;
             flex-direction: column;
             background: var(--strong-darkgray);
             overflow-y: auto;
+            
              display: block;
             transform: translateX(-100%);
             transition: transform 0.3s;   
@@ -890,13 +893,22 @@
         margin-bottom: 2rem;
     }
 
+    .faq-right{
+        padding-right: 1rem;
+        max-height: 600px;
+        min-height: 300px;
+        overflow-y: auto;
+    }
+
     .faq-heading h1{
         color: var(--pure-white);
     }
 
     .faq-content p{
         color: var(--pure-white);
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        word-spacing: 0.3rem;
         margin-left: 0;
     }
 
@@ -918,6 +930,11 @@
         margin-top: -1rem;
     }
 
+    .accordion {
+        position: relative;
+        min-height: 300px;
+        
+    }
     .accordion-items{
         background: var(--light-darkgray);
         margin-bottom: 1rem;
@@ -927,12 +944,19 @@
 
     .accordion-title{
         display: flex;
+        width: 100%;
         justify-content: space-between;
         font-size: 0.9rem;
         padding: 0.8rem 0;
         cursor: pointer;
         transition : color 0.4s;
+        border: none;
+        color: inherit;
+        background: transparent;
+        font-family: inherit;
     }
+
+    
 
     .accordion-title .status{
         font-weight: bold;
@@ -981,6 +1005,20 @@
         content: '-';
     }
 
+    .faq-loaders{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    /* Faq loaders*/
+    @keyframes dots{
+        0%,80%,100%{transform:scale(0);opacity:0.45}
+        40%{transform:scale(1.5);opacity:1}
+    }
+
     @media (max-width: 786px){
         .faq-content button{
             width: 100%;
@@ -995,7 +1033,7 @@
         background-image: url(images/fixed-bg.webp);
         background-position: center;
         background-size: cover;
-        background-attachment: scroll;
+        background-attachment: fixed;
         background-color: rgba(70, 14, 15, 0.9);
         background-blend-mode:soft-light;        
     }
@@ -1384,6 +1422,10 @@
         padding-top: 0.5rem;
     }
 
+     textarea{
+        resize: vertical;
+    }
+
     @media (max-width: 600px){
         .fields{
             flex-direction: column;
@@ -1517,6 +1559,7 @@
      .email-fl{
         display: flex;
         justify-content: center;
+        flex-direction: column;
         margin: 1.5rem;
         gap: 1rem;
      }
@@ -1536,11 +1579,6 @@
         margin: 0;
      }
 
-     @media (max-width: 576px){
-        .email-fl{
-            flex-direction: column;
-        }
-     }
 
      
     /* styles for section fotter */
@@ -1652,17 +1690,25 @@
         justify-content: center;
         align-items: center;
         position: fixed;
+        z-index: 100;
         bottom: 2rem;
         right: 2rem;
         border-radius: 50%;
         cursor: pointer;
         overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         transform: scale(0);
         transition: 0.3s;
     }
 
     #backTop.active{
         transform: scale(1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    #backTop:hover {
+        background-color: var(--strong-darkgray);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Bigger shadow on hover */
     }
 
 
@@ -1677,6 +1723,7 @@
       background: rgba(0,0,0,0.4);
       padding: 1rem; 
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
       align-content: center;
       justify-content: center;
@@ -1688,6 +1735,7 @@
     opacity: 1;
     pointer-events: auto;
     backdrop-filter: blur(6px);
+    visibility: visible;
 }
 
 .hide-popup{
@@ -1720,7 +1768,7 @@
     overflow-y: auto;
     opacity: 0;
     transform: scale(0);
-    padding: 0.1rem 2rem;
+    padding: 1rem;
     border-radius: 12px;
     margin-inline: auto;
     margin-top: 2rem;
@@ -1756,4 +1804,113 @@ color: var(--light-darkgray);
     margin-top: 0;
     width: 100%;
 }
+
+/* styles for success and error diplay*/
+
+.statusPopup {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      background: #111; /* Dark background to match site */
+     padding: 18px 28px;
+      border-radius: 8px;
+      min-width: 320px;
+      max-width: 520px;
+      text-align: center;
+      z-index: 9999;
+      opacity: 0;
+      transition: all 0.5s ease, transform 0.4s ease;
+    }
+
+    .statusPopup.success,
+    .statusPopup.error{
+        top: 80px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    .statusPopup.success{
+        border-top: 4px solid #27ae60;
+        box-shadow: 0 8px 24px rgba(39,174,96,0.4);
+    }
+    
+    .statusPopup.error{
+        border-top: 4px solid #e74c3c;
+        box-shadow: 0 8px 24px rgba(231,76,60,0.45);
+    }
+
+    .statusPopup.success .popup-message{
+        color: #27ae60;
+    }
+    
+    .statusPopup.error .popup-message{
+        color: #e74c3c;
+    }
+
+
+    i.successIcon, i.errorIcon{
+        display: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .statusPopup.success i.successIcon,
+    .statusPopup.error i.errorIcon{
+        display: table-cell;
+    }
+
+    .statusPopup.success .displayAlert,
+    .statusPopup.error .displayAlert
+    {
+        display: table;
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    .popup-message{
+        display: table-cell;
+        padding-left: 1rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+     /* Spinner (loader) */
+    .loader {
+     position: absolute;
+     inset: 0;               /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+     margin: auto;           /* center in all directions */
+     width: 22px;
+     height: 22px;
+     border: 3px solid var(--strong-darkgray);
+     border-top: 3px solid var(--light-text);
+     border-radius: 50%;
+     animation: spin 0.8s linear infinite;
+     display: none;
+     z-index: 10;
+    }
+
+    
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading .loader {
+      display: inline-block;
+    }
+
+    .loading span {
+      visibility: hidden;
+    }
+
+    button.loading::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+    
 
