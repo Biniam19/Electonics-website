@@ -56,10 +56,18 @@
 // anynmous function for navigation buttons
 
 (function (){
-    let homeButton = document.querySelector(".home-button");
-    let introButton = document.querySelectorAll(".intro-button");
-    let logo = document.querySelector('.logo');
+    const homeButton = document.querySelector(".home-button");
+    const introButton = document.querySelectorAll(".intro-button");
+    const logo = document.querySelector('.logo');
+    const blogPost = document.querySelectorAll('.blog-post');
+    const postLink = ['Blog-post/blog_v1.html', 'Blog-post/blog_v2.html', 'Blog-post/blog_v3.html']
     
+    blogPost.forEach( (blog, index) => {
+        blog.addEventListener('click', () => {
+            window.location.assign(postLink[index]);
+        })
+    });
+
     homeButton.addEventListener("click", () => {
         scrollIntoSection("about-us");
     });

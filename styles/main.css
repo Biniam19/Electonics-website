@@ -895,7 +895,7 @@
 
     .faq-right{
         padding-right: 1rem;
-        max-height: 600px;
+        max-height: 450px;
         min-height: 300px;
         overflow-y: auto;
     }
